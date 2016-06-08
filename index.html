@@ -17,10 +17,10 @@
         .done(function(response) {
           $('#pokemon').html(
             '<ul>' +
-              response.map(function(species) {
+              response.results.map(function(PokemonSpecies) {
                 return '<li>' +
-                  '<a href="' + species.url + '">' +
-                  species.name + '</a>' +
+                  '<a href="' + PokemonSpecies.url + '">' +
+                  PokemonSpecies.name + '</a>' +
                 '</li>'
               }).join('') +
             '</ul>'
